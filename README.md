@@ -1,4 +1,4 @@
-# automation-Stone
+# Automation-Stone
 
 Esse é um repositório que contém o desafio proposto pela Stone referente a automação de testes backend e frontend bem como o planejamento de casos de testes.
 
