@@ -1,0 +1,342 @@
+{
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "account_id",
+        "amount",
+        "approval_expired_at",
+        "approved_at",
+        "approved_by",
+        "batch_id",
+        "cancelled_at",
+        "cancelled_by",
+        "created_at",
+        "created_by",
+        "description",
+        "failed_at",
+        "failure_reason_code",
+        "failure_reason_description",
+        "fee",
+        "finished_at",
+        "has_similar_operation_recently",
+        "id",
+        "rejected_at",
+        "rejected_by",
+        "scheduled_to",
+        "settled_at",
+        "status",
+        "target",
+        "target_account_code",
+        "target_account_owner_name",
+        "target_in_contacts"
+    ],
+    "properties": {
+        "account_id": {
+            "type": "string",
+            "default": "",
+            "title": "The account_id Schema",
+            "examples": [
+                "bccd3bf7-3369-4622-b769-71f93d66da87"
+            ]
+        },
+        "amount": {
+            "type": "integer",
+            "default": 0,
+            "title": "The amount Schema",
+            "examples": [
+                1
+            ]
+        },
+        "approval_expired_at": {
+            "type": "null",
+            "default": null,
+            "title": "The approval_expired_at Schema",
+            "examples": [
+                null
+            ]
+        },
+        "approved_at": {
+            "type": "null",
+            "default": null,
+            "title": "The approved_at Schema",
+            "examples": [
+                null
+            ]
+        },
+        "approved_by": {
+            "type": "null",
+            "default": null,
+            "title": "The approved_by Schema",
+            "examples": [
+                null
+            ]
+        },
+        "batch_id": {
+            "type": "null",
+            "default": null,
+            "title": "The batch_id Schema",
+            "examples": [
+                null
+            ]
+        },
+        "cancelled_at": {
+            "type": "null",
+            "default": null,
+            "title": "The cancelled_at Schema",
+            "examples": [
+                null
+            ]
+        },
+        "cancelled_by": {
+            "type": "null",
+            "default": null,
+            "title": "The cancelled_by Schema",
+            "examples": [
+                null
+            ]
+        },
+        "created_at": {
+            "type": "string",
+            "default": "",
+            "title": "The created_at Schema",
+            "examples": [
+                "2022-10-08T21:10:15Z"
+            ]
+        },
+        "created_by": {
+            "type": "string",
+            "default": "",
+            "title": "The created_by Schema",
+            "examples": [
+                "user:6324a4c8-6ae6-42f2-abd1-a1ea29b0cd15"
+            ]
+        },
+        "description": {
+            "type": "string",
+            "default": "",
+            "title": "The description Schema",
+            "examples": [
+                ""
+            ]
+        },
+        "failed_at": {
+            "type": "null",
+            "default": null,
+            "title": "The failed_at Schema",
+            "examples": [
+                null
+            ]
+        },
+        "failure_reason_code": {
+            "type": "null",
+            "default": null,
+            "title": "The failure_reason_code Schema",
+            "examples": [
+                null
+            ]
+        },
+        "failure_reason_description": {
+            "type": "null",
+            "default": null,
+            "title": "The failure_reason_description Schema",
+            "examples": [
+                null
+            ]
+        },
+        "fee": {
+            "type": "integer",
+            "default": 0,
+            "title": "The fee Schema",
+            "examples": [
+                0
+            ]
+        },
+        "finished_at": {
+            "type": "null",
+            "default": null,
+            "title": "The finished_at Schema",
+            "examples": [
+                null
+            ]
+        },
+        "has_similar_operation_recently": {
+            "type": "boolean",
+            "default": false,
+            "title": "The has_similar_operation_recently Schema",
+            "examples": [
+                false
+            ]
+        },
+        "id": {
+            "type": "string",
+            "default": "",
+            "title": "The id Schema",
+            "examples": [
+                "3abf0df7-c71d-4e8c-884c-64c1a61c95ee"
+            ]
+        },
+        "rejected_at": {
+            "type": "null",
+            "default": null,
+            "title": "The rejected_at Schema",
+            "examples": [
+                null
+            ]
+        },
+        "rejected_by": {
+            "type": "null",
+            "default": null,
+            "title": "The rejected_by Schema",
+            "examples": [
+                null
+            ]
+        },
+        "scheduled_to": {
+            "type": "null",
+            "default": null,
+            "title": "The scheduled_to Schema",
+            "examples": [
+                null
+            ]
+        },
+        "settled_at": {
+            "type": "null",
+            "default": null,
+            "title": "The settled_at Schema",
+            "examples": [
+                null
+            ]
+        },
+        "status": {
+            "type": "string",
+            "default": "",
+            "title": "The status Schema",
+            "examples": [
+                "CREATED"
+            ]
+        },
+        "target": {
+            "type": "object",
+            "default": {},
+            "title": "The target Schema",
+            "required": [
+                "account",
+                "entity"
+            ],
+            "properties": {
+                "account": {
+                    "type": "object",
+                    "default": {},
+                    "title": "The account Schema",
+                    "required": [
+                        "account_code"
+                    ],
+                    "properties": {
+                        "account_code": {
+                            "type": "string",
+                            "default": "",
+                            "title": "The account_code Schema",
+                            "examples": [
+                                "475384"
+                            ]
+                        }
+                    },
+                    "examples": [{
+                        "account_code": "475384"
+                    }]
+                },
+                "entity": {
+                    "type": "object",
+                    "default": {},
+                    "title": "The entity Schema",
+                    "required": [
+                        "name"
+                    ],
+                    "properties": {
+                        "name": {
+                            "type": "string",
+                            "default": "",
+                            "title": "The name Schema",
+                            "examples": [
+                                "Leonardo Pereira"
+                            ]
+                        }
+                    },
+                    "examples": [{
+                        "name": "Leonardo Pereira"
+                    }]
+                }
+            },
+            "examples": [{
+                "account": {
+                    "account_code": "475384"
+                },
+                "entity": {
+                    "name": "Leonardo Pereira"
+                }
+            }]
+        },
+        "target_account_code": {
+            "type": "string",
+            "default": "",
+            "title": "The target_account_code Schema",
+            "examples": [
+                "475384"
+            ]
+        },
+        "target_account_owner_name": {
+            "type": "string",
+            "default": "",
+            "title": "The target_account_owner_name Schema",
+            "examples": [
+                "Leonardo Pereira"
+            ]
+        },
+        "target_in_contacts": {
+            "type": "boolean",
+            "default": false,
+            "title": "The target_in_contacts Schema",
+            "examples": [
+                false
+            ]
+        }
+    },
+    "examples": [{
+        "account_id": "bccd3bf7-3369-4622-b769-71f93d66da87",
+        "amount": 1,
+        "approval_expired_at": null,
+        "approved_at": null,
+        "approved_by": null,
+        "batch_id": null,
+        "cancelled_at": null,
+        "cancelled_by": null,
+        "created_at": "2022-10-08T21:10:15Z",
+        "created_by": "user:6324a4c8-6ae6-42f2-abd1-a1ea29b0cd15",
+        "description": "",
+        "failed_at": null,
+        "failure_reason_code": null,
+        "failure_reason_description": null,
+        "fee": 0,
+        "finished_at": null,
+        "has_similar_operation_recently": false,
+        "id": "3abf0df7-c71d-4e8c-884c-64c1a61c95ee",
+        "rejected_at": null,
+        "rejected_by": null,
+        "scheduled_to": null,
+        "settled_at": null,
+        "status": "CREATED",
+        "target": {
+            "account": {
+                "account_code": "475384"
+            },
+            "entity": {
+                "name": "Leonardo Pereira"
+            }
+        },
+        "target_account_code": "475384",
+        "target_account_owner_name": "Leonardo Pereira",
+        "target_in_contacts": false
+    }]
+}

@@ -1,0 +1,33 @@
+{
+    "properties": {
+        "balance": {
+            "type": "integer",
+            "default": 0,
+            "title": "The balance Schema",
+            "examples": [
+                98
+            ]
+        },
+        "blocked_balance": {
+            "type": "integer",
+            "default": 0,
+            "title": "The blocked_balance Schema",
+            "examples": [
+                0
+            ]
+        },
+        "scheduled_balance": {
+            "type": "integer",
+            "default": 0,
+            "title": "The scheduled_balance Schema",
+            "examples": [
+                0
+            ]
+        }
+    },
+    "examples": [{
+        "balance": 98,
+        "blocked_balance": 0,
+        "scheduled_balance": 0
+    }]
+}

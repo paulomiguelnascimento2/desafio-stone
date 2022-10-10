@@ -1,0 +1,1493 @@
+{
+    "properties": {
+        "cursor": {
+            "type": "object",
+            "default": {},
+            "title": "The cursor Schema",
+            "required": [
+                "after",
+                "before",
+                "limit"
+            ],
+            "properties": {
+                "after": {
+                    "type": "null",
+                    "default": null,
+                    "title": "The after Schema",
+                    "examples": [
+                        null
+                    ]
+                },
+                "before": {
+                    "type": "null",
+                    "default": null,
+                    "title": "The before Schema",
+                    "examples": [
+                        null
+                    ]
+                },
+                "limit": {
+                    "type": "integer",
+                    "default": 0,
+                    "title": "The limit Schema",
+                    "examples": [
+                        25
+                    ]
+                }
+            },
+            "examples": [{
+                "after": null,
+                "before": null,
+                "limit": 25
+            }]
+        },
+        "data": {
+            "type": "array",
+            "default": [],
+            "title": "The data Schema",
+            "items": {
+                "type": "object",
+                "title": "A Schema",
+                "required": [
+                    "account_id",
+                    "amount",
+                    "approval_subject",
+                    "balance_after",
+                    "balance_before",
+                    "counter_party",
+                    "created_at",
+                    "creation_subject",
+                    "delayed_to_next_business_day",
+                    "fee_amount",
+                    "id",
+                    "operation",
+                    "operation_amount",
+                    "operation_details",
+                    "operation_id",
+                    "refund_reason_code",
+                    "refund_reason_description",
+                    "scheduled_at",
+                    "scheduled_to_effective",
+                    "scheduled_to_requested",
+                    "status",
+                    "subtitle",
+                    "title",
+                    "type",
+                    "description",
+                    "scheduled_to",
+                    "counterparty_agent"
+                ],
+                "properties": {
+                    "account_id": {
+                        "type": "string",
+                        "title": "The account_id Schema",
+                        "examples": [
+                            "bccd3bf7-3369-4622-b769-71f93d66da87"
+                        ]
+                    },
+                    "amount": {
+                        "type": "integer",
+                        "title": "The amount Schema",
+                        "examples": [
+                            279900,
+                            1,
+                            10000,
+                            300000
+                        ]
+                    },
+                    "approval_subject": {
+                        "type": [
+                            "object",
+                            "null"
+                        ],
+                        "title": "The approval_subject Schema",
+                        "required": [
+                            "document",
+                            "id",
+                            "legal_name",
+                            "name"
+                        ],
+                        "properties": {
+                            "document": {
+                                "type": "string",
+                                "title": "The document Schema",
+                                "examples": [
+                                    "24151507035"
+                                ]
+                            },
+                            "id": {
+                                "type": "string",
+                                "title": "The id Schema",
+                                "examples": [
+                                    "user:6324a4c8-6ae6-42f2-abd1-a1ea29b0cd15"
+                                ]
+                            },
+                            "legal_name": {
+                                "type": "string",
+                                "title": "The legal_name Schema",
+                                "examples": [
+                                    "Nome do CPF 24151507035"
+                                ]
+                            },
+                            "name": {
+                                "type": "null",
+                                "title": "The name Schema",
+                                "examples": [
+                                    null
+                                ]
+                            }
+                        },
+                        "examples": [{
+                                "document": "24151507035",
+                                "id": "user:6324a4c8-6ae6-42f2-abd1-a1ea29b0cd15",
+                                "legal_name": "Nome do CPF 24151507035",
+                                "name": null
+                            },
+                            {
+                                "document": "24151507035",
+                                "id": "user:6324a4c8-6ae6-42f2-abd1-a1ea29b0cd15",
+                                "legal_name": "Nome do CPF 24151507035",
+                                "name": null
+                            },
+                            {
+                                "document": "24151507035",
+                                "id": "user:6324a4c8-6ae6-42f2-abd1-a1ea29b0cd15",
+                                "legal_name": "Nome do CPF 24151507035",
+                                "name": null
+                            },
+                            {
+                                "document": "24151507035",
+                                "id": "user:6324a4c8-6ae6-42f2-abd1-a1ea29b0cd15",
+                                "legal_name": "Nome do CPF 24151507035",
+                                "name": null
+                            },
+                            null
+                        ]
+                    },
+                    "balance_after": {
+                        "type": "integer",
+                        "title": "The balance_after Schema",
+                        "examples": [
+                            98,
+                            279998,
+                            279999,
+                            289999,
+                            299999,
+                            300000
+                        ]
+                    },
+                    "balance_before": {
+                        "type": "integer",
+                        "title": "The balance_before Schema",
+                        "examples": [
+                            279998,
+                            279999,
+                            289999,
+                            299999,
+                            300000,
+                            0
+                        ]
+                    },
+                    "counter_party": {
+                        "type": "object",
+                        "title": "The counter_party Schema",
+                        "required": [
+                            "account",
+                            "entity"
+                        ],
+                        "properties": {
+                            "account": {
+                                "type": "object",
+                                "title": "The account Schema",
+                                "required": [
+                                    "account_code",
+                                    "account_type",
+                                    "branch_code",
+                                    "institution",
+                                    "institution_name"
+                                ],
+                                "properties": {
+                                    "account_code": {
+                                        "type": "string",
+                                        "title": "The account_code Schema",
+                                        "examples": [
+                                            "68888",
+                                            "475384"
+                                        ]
+                                    },
+                                    "account_type": {
+                                        "type": "string",
+                                        "default": "",
+                                        "title": "The account_type Schema",
+                                        "examples": [
+                                            "CC"
+                                        ]
+                                    },
+                                    "branch_code": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ],
+                                        "title": "The branch_code Schema",
+                                        "examples": [
+                                            "3141",
+                                            null,
+                                            "1"
+                                        ]
+                                    },
+                                    "institution": {
+                                        "type": "string",
+                                        "title": "The institution Schema",
+                                        "examples": [
+                                            "60746948",
+                                            "16501555"
+                                        ]
+                                    },
+                                    "institution_name": {
+                                        "type": "string",
+                                        "title": "The institution_name Schema",
+                                        "examples": [
+                                            "Banco Bradesco S.A.",
+                                            "STONE INSTITUIÇÃO DE PAGAMENTO S.A."
+                                        ]
+                                    }
+                                },
+                                "examples": [{
+                                    "account_code": "68888",
+                                    "account_type": "CC",
+                                    "branch_code": "3141",
+                                    "institution": "60746948",
+                                    "institution_name": "Banco Bradesco S.A."
+                                },
+                                {
+                                    "account_code": "475384",
+                                    "branch_code": null,
+                                    "institution": "16501555",
+                                    "institution_name": "STONE INSTITUIÇÃO DE PAGAMENTO S.A."
+                                },
+                                {
+                                    "account_code": "475384",
+                                    "branch_code": null,
+                                    "institution": "16501555",
+                                    "institution_name": "STONE INSTITUIÇÃO DE PAGAMENTO S.A."
+                                },
+                                {
+                                    "account_code": "475384",
+                                    "branch_code": null,
+                                    "institution": "16501555",
+                                    "institution_name": "STONE INSTITUIÇÃO DE PAGAMENTO S.A."
+                                },
+                                {
+                                    "account_code": "475384",
+                                    "branch_code": "1",
+                                    "institution": "16501555",
+                                    "institution_name": "STONE INSTITUIÇÃO DE PAGAMENTO S.A."
+                                }]
+                            },
+                            "entity": {
+                                "type": "object",
+                                "title": "The entity Schema",
+                                "required": [
+                                    "document",
+                                    "document_type",
+                                    "name"
+                                ],
+                                "properties": {
+                                    "document": {
+                                        "type": "string",
+                                        "title": "The document Schema",
+                                        "examples": [
+                                            "00841116407",
+                                            "39166457068"
+                                        ]
+                                    },
+                                    "document_type": {
+                                        "type": "string",
+                                        "title": "The document_type Schema",
+                                        "examples": [
+                                            "cpf"
+                                        ]
+                                    },
+                                    "name": {
+                                        "type": "string",
+                                        "title": "The name Schema",
+                                        "examples": [
+                                            "ELLEN CRISTINE SANTOS SIQUEIRA",
+                                            "Leonardo Pereira"
+                                        ]
+                                    }
+                                },
+                                "examples": [{
+                                    "document": "00841116407",
+                                    "document_type": "cpf",
+                                    "name": "ELLEN CRISTINE SANTOS SIQUEIRA"
+                                },
+                                {
+                                    "name": "Leonardo Pereira"
+                                },
+                                {
+                                    "name": "Leonardo Pereira"
+                                },
+                                {
+                                    "name": "Leonardo Pereira"
+                                },
+                                {
+                                    "document": "39166457068",
+                                    "document_type": "cpf",
+                                    "name": "Leonardo Pereira"
+                                }]
+                            }
+                        },
+                        "examples": [{
+                            "account": {
+                                "account_code": "68888",
+                                "account_type": "CC",
+                                "branch_code": "3141",
+                                "institution": "60746948",
+                                "institution_name": "Banco Bradesco S.A."
+                            },
+                            "entity": {
+                                "document": "00841116407",
+                                "document_type": "cpf",
+                                "name": "ELLEN CRISTINE SANTOS SIQUEIRA"
+                            }
+                        },
+                        {
+                            "account": {
+                                "account_code": "475384",
+                                "branch_code": null,
+                                "institution": "16501555",
+                                "institution_name": "STONE INSTITUIÇÃO DE PAGAMENTO S.A."
+                            },
+                            "entity": {
+                                "name": "Leonardo Pereira"
+                            }
+                        },
+                        {
+                            "account": {
+                                "account_code": "475384",
+                                "branch_code": null,
+                                "institution": "16501555",
+                                "institution_name": "STONE INSTITUIÇÃO DE PAGAMENTO S.A."
+                            },
+                            "entity": {
+                                "name": "Leonardo Pereira"
+                            }
+                        },
+                        {
+                            "account": {
+                                "account_code": "475384",
+                                "branch_code": null,
+                                "institution": "16501555",
+                                "institution_name": "STONE INSTITUIÇÃO DE PAGAMENTO S.A."
+                            },
+                            "entity": {
+                                "name": "Leonardo Pereira"
+                            }
+                        },
+                        {
+                            "account": {
+                                "account_code": "475384",
+                                "branch_code": "1",
+                                "institution": "16501555",
+                                "institution_name": "STONE INSTITUIÇÃO DE PAGAMENTO S.A."
+                            },
+                            "entity": {
+                                "document": "39166457068",
+                                "document_type": "cpf",
+                                "name": "Leonardo Pereira"
+                            }
+                        }]
+                    },
+                    "created_at": {
+                        "type": "string",
+                        "title": "The created_at Schema",
+                        "examples": [
+                            "2022-10-07T12:55:12Z",
+                            "2022-10-07T00:01:25Z",
+                            "2022-09-29T05:12:28Z",
+                            "2022-09-24T01:17:34Z",
+                            "2022-05-24T01:57:44Z",
+                            "2021-03-24T13:32:24Z"
+                        ]
+                    },
+                    "creation_subject": {
+                        "type": [
+                            "object",
+                            "null"
+                        ],
+                        "title": "The creation_subject Schema",
+                        "required": [
+                            "document",
+                            "id",
+                            "legal_name",
+                            "name"
+                        ],
+                        "properties": {
+                            "document": {
+                                "type": "string",
+                                "title": "The document Schema",
+                                "examples": [
+                                    "24151507035"
+                                ]
+                            },
+                            "id": {
+                                "type": "string",
+                                "title": "The id Schema",
+                                "examples": [
+                                    "user:6324a4c8-6ae6-42f2-abd1-a1ea29b0cd15"
+                                ]
+                            },
+                            "legal_name": {
+                                "type": "string",
+                                "title": "The legal_name Schema",
+                                "examples": [
+                                    "Nome do CPF 24151507035"
+                                ]
+                            },
+                            "name": {
+                                "type": "null",
+                                "title": "The name Schema",
+                                "examples": [
+                                    null
+                                ]
+                            }
+                        },
+                        "examples": [{
+                                "document": "24151507035",
+                                "id": "user:6324a4c8-6ae6-42f2-abd1-a1ea29b0cd15",
+                                "legal_name": "Nome do CPF 24151507035",
+                                "name": null
+                            },
+                            {
+                                "document": "24151507035",
+                                "id": "user:6324a4c8-6ae6-42f2-abd1-a1ea29b0cd15",
+                                "legal_name": "Nome do CPF 24151507035",
+                                "name": null
+                            },
+                            {
+                                "document": "24151507035",
+                                "id": "user:6324a4c8-6ae6-42f2-abd1-a1ea29b0cd15",
+                                "legal_name": "Nome do CPF 24151507035",
+                                "name": null
+                            },
+                            {
+                                "document": "24151507035",
+                                "id": "user:6324a4c8-6ae6-42f2-abd1-a1ea29b0cd15",
+                                "legal_name": "Nome do CPF 24151507035",
+                                "name": null
+                            },
+                            null
+                        ]
+                    },
+                    "delayed_to_next_business_day": {
+                        "type": "boolean",
+                        "default": false,
+                        "title": "The delayed_to_next_business_day Schema",
+                        "examples": [
+                            false
+                        ]
+                    },
+                    "fee_amount": {
+                        "type": "integer",
+                        "title": "The fee_amount Schema",
+                        "examples": [
+                            0
+                        ]
+                    },
+                    "id": {
+                        "type": "string",
+                        "title": "The id Schema",
+                        "examples": [
+                            "01d09b8f-00af-4063-b22a-d657dbac9512",
+                            "fd0d2fe0-e952-4676-8683-5b38efae7db6",
+                            "193cbfb0-b4c8-4629-9431-fa1f34b1d7ef",
+                            "f51b7980-01d8-47db-acd6-384e2e880693",
+                            "ef3b4003-3bee-4ef5-ba4d-30012bc2a95c",
+                            "55147fc5-b222-447f-be02-0895cc778dff"
+                        ]
+                    },
+                    "operation": {
+                        "type": "string",
+                        "title": "The operation Schema",
+                        "examples": [
+                            "debit",
+                            "credit"
+                        ]
+                    },
+                    "operation_amount": {
+                        "type": "integer",
+                        "title": "The operation_amount Schema",
+                        "examples": [
+                            279900,
+                            1,
+                            10000
+                        ]
+                    },
+                    "operation_details": {
+                        "type": "null",
+                        "title": "The operation_details Schema",
+                        "examples": [
+                            null
+                        ]
+                    },
+                    "operation_id": {
+                        "type": "string",
+                        "title": "The operation_id Schema",
+                        "examples": [
+                            "cabf62a0-1ef8-4509-b755-b01b4f676583",
+                            "2fcb065b-bf16-49db-b366-86ad1a89ca71",
+                            "7e0a487e-dd31-4d0b-b5e0-f285d5e106e6",
+                            "5b668617-7bc8-4961-b51d-3e4f0e648081",
+                            "202b0125-fb03-459c-82f8-fdf418b8c5d5",
+                            "8b7ba576-7da8-4a04-bb22-83ae02b1c82d"
+                        ]
+                    },
+                    "refund_reason_code": {
+                        "type": "null",
+                        "default": null,
+                        "title": "The refund_reason_code Schema",
+                        "examples": [
+                            null
+                        ]
+                    },
+                    "refund_reason_description": {
+                        "type": "null",
+                        "default": null,
+                        "title": "The refund_reason_description Schema",
+                        "examples": [
+                            null
+                        ]
+                    },
+                    "scheduled_at": {
+                        "type": "null",
+                        "title": "The scheduled_at Schema",
+                        "examples": [
+                            null
+                        ]
+                    },
+                    "scheduled_to_effective": {
+                        "type": "null",
+                        "default": null,
+                        "title": "The scheduled_to_effective Schema",
+                        "examples": [
+                            null
+                        ]
+                    },
+                    "scheduled_to_requested": {
+                        "type": "null",
+                        "default": null,
+                        "title": "The scheduled_to_requested Schema",
+                        "examples": [
+                            null
+                        ]
+                    },
+                    "status": {
+                        "type": "string",
+                        "title": "The status Schema",
+                        "examples": [
+                            "FINISHED"
+                        ]
+                    },
+                    "subtitle": {
+                        "type": "string",
+                        "title": "The subtitle Schema",
+                        "examples": [
+                            "TED",
+                            "Transferência Stone",
+                            "Seguro de Vida"
+                        ]
+                    },
+                    "title": {
+                        "type": "string",
+                        "title": "The title Schema",
+                        "examples": [
+                            "ELLEN CRISTINE SANTOS SIQUEIRA",
+                            "Leonardo Pereira",
+                            "Stone Seguros"
+                        ]
+                    },
+                    "type": {
+                        "type": "string",
+                        "title": "The type Schema",
+                        "examples": [
+                            "external",
+                            "internal",
+                            "insurance_payment"
+                        ]
+                    },
+                    "description": {
+                        "type": "string",
+                        "title": "The description Schema",
+                        "examples": [
+                            ""
+                        ]
+                    },
+                    "scheduled_to": {
+                        "type": "null",
+                        "title": "The scheduled_to Schema",
+                        "examples": [
+                            null
+                        ]
+                    },
+                    "counterparty_agent": {
+                        "type": "object",
+                        "default": {},
+                        "title": "The counterparty_agent Schema",
+                        "required": [
+                            "account",
+                            "entity",
+                            "institution"
+                        ],
+                        "properties": {
+                            "account": {
+                                "type": "null",
+                                "default": null,
+                                "title": "The account Schema",
+                                "examples": [
+                                    null
+                                ]
+                            },
+                            "entity": {
+                                "type": "object",
+                                "default": {},
+                                "title": "The entity Schema",
+                                "required": [
+                                    "document",
+                                    "document_type",
+                                    "name"
+                                ],
+                                "properties": {
+                                    "document": {
+                                        "type": "string",
+                                        "default": "",
+                                        "title": "The document Schema",
+                                        "examples": [
+                                            "30378530003"
+                                        ]
+                                    },
+                                    "document_type": {
+                                        "type": "string",
+                                        "default": "",
+                                        "title": "The document_type Schema",
+                                        "examples": [
+                                            "cpf"
+                                        ]
+                                    },
+                                    "name": {
+                                        "type": "string",
+                                        "default": "",
+                                        "title": "The name Schema",
+                                        "examples": [
+                                            "Bruno De Castro Oliveira"
+                                        ]
+                                    }
+                                },
+                                "examples": [{
+                                    "document": "30378530003",
+                                    "document_type": "cpf",
+                                    "name": "Bruno De Castro Oliveira"
+                                }]
+                            },
+                            "institution": {
+                                "type": "object",
+                                "default": {},
+                                "title": "The institution Schema",
+                                "required": [
+                                    "compe",
+                                    "ispb",
+                                    "name"
+                                ],
+                                "properties": {
+                                    "compe": {
+                                        "type": "string",
+                                        "default": "",
+                                        "title": "The compe Schema",
+                                        "examples": [
+                                            "197"
+                                        ]
+                                    },
+                                    "ispb": {
+                                        "type": "string",
+                                        "default": "",
+                                        "title": "The ispb Schema",
+                                        "examples": [
+                                            "16501555"
+                                        ]
+                                    },
+                                    "name": {
+                                        "type": "string",
+                                        "default": "",
+                                        "title": "The name Schema",
+                                        "examples": [
+                                            "STONE INSTITUIÇÃO DE PAGAMENTO S.A."
+                                        ]
+                                    }
+                                },
+                                "examples": [{
+                                    "compe": "197",
+                                    "ispb": "16501555",
+                                    "name": "STONE INSTITUIÇÃO DE PAGAMENTO S.A."
+                                }]
+                            }
+                        },
+                        "examples": [{
+                            "account": null,
+                            "entity": {
+                                "document": "30378530003",
+                                "document_type": "cpf",
+                                "name": "Bruno De Castro Oliveira"
+                            },
+                            "institution": {
+                                "compe": "197",
+                                "ispb": "16501555",
+                                "name": "STONE INSTITUIÇÃO DE PAGAMENTO S.A."
+                            }
+                        }]
+                    }
+                },
+                "examples": [{
+                    "account_id": "bccd3bf7-3369-4622-b769-71f93d66da87",
+                    "amount":
+                        279900,
+                    "approval_subject": {
+                        "document": "24151507035",
+                        "id": "user:6324a4c8-6ae6-42f2-abd1-a1ea29b0cd15",
+                        "legal_name": "Nome do CPF 24151507035",
+                        "name": null
+                    },
+                    "balance_after": 98,
+                    "balance_before": 279998,
+                    "counter_party": {
+                        "account": {
+                            "account_code": "68888",
+                            "account_type": "CC",
+                            "branch_code": "3141",
+                            "institution": "60746948",
+                            "institution_name": "Banco Bradesco S.A."
+                        },
+                        "entity": {
+                            "document": "00841116407",
+                            "document_type": "cpf",
+                            "name": "ELLEN CRISTINE SANTOS SIQUEIRA"
+                        }
+                    },
+                    "created_at": "2022-10-07T12:55:12Z",
+                    "creation_subject": {
+                        "document": "24151507035",
+                        "id": "user:6324a4c8-6ae6-42f2-abd1-a1ea29b0cd15",
+                        "legal_name": "Nome do CPF 24151507035",
+                        "name": null
+                    },
+                    "delayed_to_next_business_day": false,
+                    "fee_amount": 0,
+                    "id": "01d09b8f-00af-4063-b22a-d657dbac9512",
+                    "operation": "debit",
+                    "operation_amount": 279900,
+                    "operation_details": null,
+                    "operation_id": "cabf62a0-1ef8-4509-b755-b01b4f676583",
+                    "refund_reason_code": null,
+                    "refund_reason_description": null,
+                    "scheduled_at": null,
+                    "scheduled_to_effective": null,
+                    "scheduled_to_requested": null,
+                    "status": "FINISHED",
+                    "subtitle": "TED",
+                    "title": "ELLEN CRISTINE SANTOS SIQUEIRA",
+                    "type": "external"
+                },
+                {
+                    "account_id": "bccd3bf7-3369-4622-b769-71f93d66da87",
+                    "amount":
+                        1,
+                    "approval_subject": {
+                        "document": "24151507035",
+                        "id": "user:6324a4c8-6ae6-42f2-abd1-a1ea29b0cd15",
+                        "legal_name": "Nome do CPF 24151507035",
+                        "name": null
+                    },
+                    "balance_after": 279998,
+                    "balance_before": 279999,
+                    "counter_party": {
+                        "account": {
+                            "account_code": "475384",
+                            "branch_code": null,
+                            "institution": "16501555",
+                            "institution_name": "STONE INSTITUIÇÃO DE PAGAMENTO S.A."
+                        },
+                        "entity": {
+                            "name": "Leonardo Pereira"
+                        }
+                    },
+                    "created_at": "2022-10-07T00:01:25Z",
+                    "creation_subject": {
+                        "document": "24151507035",
+                        "id": "user:6324a4c8-6ae6-42f2-abd1-a1ea29b0cd15",
+                        "legal_name": "Nome do CPF 24151507035",
+                        "name": null
+                    },
+                    "description": "",
+                    "fee_amount": 0,
+                    "id": "fd0d2fe0-e952-4676-8683-5b38efae7db6",
+                    "operation": "debit",
+                    "operation_amount": 1,
+                    "operation_details": null,
+                    "operation_id": "2fcb065b-bf16-49db-b366-86ad1a89ca71",
+                    "scheduled_at": null,
+                    "scheduled_to": null,
+                    "status": "FINISHED",
+                    "subtitle": "Transferência Stone",
+                    "title": "Leonardo Pereira",
+                    "type": "internal"
+                },
+                {
+                    "account_id": "bccd3bf7-3369-4622-b769-71f93d66da87",
+                    "amount":
+                        10000,
+                    "approval_subject": {
+                        "document": "24151507035",
+                        "id": "user:6324a4c8-6ae6-42f2-abd1-a1ea29b0cd15",
+                        "legal_name": "Nome do CPF 24151507035",
+                        "name": null
+                    },
+                    "balance_after": 279999,
+                    "balance_before": 289999,
+                    "counter_party": {
+                        "account": {
+                            "account_code": "475384",
+                            "branch_code": null,
+                            "institution": "16501555",
+                            "institution_name": "STONE INSTITUIÇÃO DE PAGAMENTO S.A."
+                        },
+                        "entity": {
+                            "name": "Leonardo Pereira"
+                        }
+                    },
+                    "created_at": "2022-09-29T05:12:28Z",
+                    "creation_subject": {
+                        "document": "24151507035",
+                        "id": "user:6324a4c8-6ae6-42f2-abd1-a1ea29b0cd15",
+                        "legal_name": "Nome do CPF 24151507035",
+                        "name": null
+                    },
+                    "description": "",
+                    "fee_amount": 0,
+                    "id": "193cbfb0-b4c8-4629-9431-fa1f34b1d7ef",
+                    "operation": "debit",
+                    "operation_amount": 10000,
+                    "operation_details": null,
+                    "operation_id": "7e0a487e-dd31-4d0b-b5e0-f285d5e106e6",
+                    "scheduled_at": null,
+                    "scheduled_to": null,
+                    "status": "FINISHED",
+                    "subtitle": "Transferência Stone",
+                    "title": "Leonardo Pereira",
+                    "type": "internal"
+                },
+                {
+                    "account_id": "bccd3bf7-3369-4622-b769-71f93d66da87",
+                    "amount":
+                        10000,
+                    "approval_subject": {
+                        "document": "24151507035",
+                        "id": "user:6324a4c8-6ae6-42f2-abd1-a1ea29b0cd15",
+                        "legal_name": "Nome do CPF 24151507035",
+                        "name": null
+                    },
+                    "balance_after": 289999,
+                    "balance_before": 299999,
+                    "counter_party": {
+                        "account": {
+                            "account_code": "475384",
+                            "branch_code": null,
+                            "institution": "16501555",
+                            "institution_name": "STONE INSTITUIÇÃO DE PAGAMENTO S.A."
+                        },
+                        "entity": {
+                            "name": "Leonardo Pereira"
+                        }
+                    },
+                    "created_at": "2022-09-24T01:17:34Z",
+                    "creation_subject": {
+                        "document": "24151507035",
+                        "id": "user:6324a4c8-6ae6-42f2-abd1-a1ea29b0cd15",
+                        "legal_name": "Nome do CPF 24151507035",
+                        "name": null
+                    },
+                    "description": "",
+                    "fee_amount": 0,
+                    "id": "f51b7980-01d8-47db-acd6-384e2e880693",
+                    "operation": "debit",
+                    "operation_amount": 10000,
+                    "operation_details": null,
+                    "operation_id": "5b668617-7bc8-4961-b51d-3e4f0e648081",
+                    "scheduled_at": null,
+                    "scheduled_to": null,
+                    "status": "FINISHED",
+                    "subtitle": "Transferência Stone",
+                    "title": "Leonardo Pereira",
+                    "type": "internal"
+                },
+                {
+                    "account_id": "bccd3bf7-3369-4622-b769-71f93d66da87",
+                    "amount":
+                        1,
+                    "approval_subject": null,
+                    "balance_after": 299999,
+                    "balance_before": 300000,
+                    "counterparty_agent": {
+                        "account": null,
+                        "entity": {
+                            "document": "30378530003",
+                            "document_type": "cpf",
+                            "name": "Bruno De Castro Oliveira"
+                        },
+                        "institution": {
+                            "compe": "197",
+                            "ispb": "16501555",
+                            "name": "STONE INSTITUIÇÃO DE PAGAMENTO S.A."
+                        }
+                    },
+                    "created_at": "2022-05-24T01:57:44Z",
+                    "creation_subject": null,
+                    "fee_amount": 0,
+                    "id": "ef3b4003-3bee-4ef5-ba4d-30012bc2a95c",
+                    "operation": "debit",
+                    "operation_amount": 1,
+                    "operation_details": null,
+                    "operation_id": "202b0125-fb03-459c-82f8-fdf418b8c5d5",
+                    "status": "FINISHED",
+                    "subtitle": "Seguro de Vida",
+                    "title": "Stone Seguros",
+                    "type": "insurance_payment"
+                },
+                {
+                    "account_id": "bccd3bf7-3369-4622-b769-71f93d66da87",
+                    "amount": 300000,
+                    "balance_after": 300000,
+                    "balance_before": 0,
+                    "counter_party": {
+                        "account": {
+                            "account_code": "475384",
+                            "branch_code": "1",
+                            "institution": "16501555",
+                            "institution_name": "STONE INSTITUIÇÃO DE PAGAMENTO S.A."
+                        },
+                        "entity": {
+                            "document": "39166457068",
+                            "document_type": "cpf",
+                            "name": "Leonardo Pereira"
+                        }
+                    },
+                    "created_at": "2021-03-24T13:32:24Z",
+                    "description": "",
+                    "id": "55147fc5-b222-447f-be02-0895cc778dff",
+                    "operation": "credit",
+                    "operation_details": null,
+                    "operation_id": "8b7ba576-7da8-4a04-bb22-83ae02b1c82d",
+                    "status": "FINISHED",
+                    "subtitle": "Transferência Stone",
+                    "title": "Leonardo Pereira",
+                    "type": "internal"
+                }]
+            },
+            "examples": [
+                [{
+                    "account_id": "bccd3bf7-3369-4622-b769-71f93d66da87",
+                    "amount":
+                        279900,
+                    "approval_subject": {
+                        "document": "24151507035",
+                        "id": "user:6324a4c8-6ae6-42f2-abd1-a1ea29b0cd15",
+                        "legal_name": "Nome do CPF 24151507035",
+                        "name": null
+                    },
+                    "balance_after": 98,
+                    "balance_before": 279998,
+                    "counter_party": {
+                        "account": {
+                            "account_code": "68888",
+                            "account_type": "CC",
+                            "branch_code": "3141",
+                            "institution": "60746948",
+                            "institution_name": "Banco Bradesco S.A."
+                        },
+                        "entity": {
+                            "document": "00841116407",
+                            "document_type": "cpf",
+                            "name": "ELLEN CRISTINE SANTOS SIQUEIRA"
+                        }
+                    },
+                    "created_at": "2022-10-07T12:55:12Z",
+                    "creation_subject": {
+                        "document": "24151507035",
+                        "id": "user:6324a4c8-6ae6-42f2-abd1-a1ea29b0cd15",
+                        "legal_name": "Nome do CPF 24151507035",
+                        "name": null
+                    },
+                    "delayed_to_next_business_day": false,
+                    "fee_amount": 0,
+                    "id": "01d09b8f-00af-4063-b22a-d657dbac9512",
+                    "operation": "debit",
+                    "operation_amount": 279900,
+                    "operation_details": null,
+                    "operation_id": "cabf62a0-1ef8-4509-b755-b01b4f676583",
+                    "refund_reason_code": null,
+                    "refund_reason_description": null,
+                    "scheduled_at": null,
+                    "scheduled_to_effective": null,
+                    "scheduled_to_requested": null,
+                    "status": "FINISHED",
+                    "subtitle": "TED",
+                    "title": "ELLEN CRISTINE SANTOS SIQUEIRA",
+                    "type": "external"
+                },
+                {
+                    "account_id": "bccd3bf7-3369-4622-b769-71f93d66da87",
+                    "amount":
+                        1,
+                    "approval_subject": {
+                        "document": "24151507035",
+                        "id": "user:6324a4c8-6ae6-42f2-abd1-a1ea29b0cd15",
+                        "legal_name": "Nome do CPF 24151507035",
+                        "name": null
+                    },
+                    "balance_after": 279998,
+                    "balance_before": 279999,
+                    "counter_party": {
+                        "account": {
+                            "account_code": "475384",
+                            "branch_code": null,
+                            "institution": "16501555",
+                            "institution_name": "STONE INSTITUIÇÃO DE PAGAMENTO S.A."
+                        },
+                        "entity": {
+                            "name": "Leonardo Pereira"
+                        }
+                    },
+                    "created_at": "2022-10-07T00:01:25Z",
+                    "creation_subject": {
+                        "document": "24151507035",
+                        "id": "user:6324a4c8-6ae6-42f2-abd1-a1ea29b0cd15",
+                        "legal_name": "Nome do CPF 24151507035",
+                        "name": null
+                    },
+                    "description": "",
+                    "fee_amount": 0,
+                    "id": "fd0d2fe0-e952-4676-8683-5b38efae7db6",
+                    "operation": "debit",
+                    "operation_amount": 1,
+                    "operation_details": null,
+                    "operation_id": "2fcb065b-bf16-49db-b366-86ad1a89ca71",
+                    "scheduled_at": null,
+                    "scheduled_to": null,
+                    "status": "FINISHED",
+                    "subtitle": "Transferência Stone",
+                    "title": "Leonardo Pereira",
+                    "type": "internal"
+                },
+                {
+                    "account_id": "bccd3bf7-3369-4622-b769-71f93d66da87",
+                    "amount":
+                        10000,
+                    "approval_subject": {
+                        "document": "24151507035",
+                        "id": "user:6324a4c8-6ae6-42f2-abd1-a1ea29b0cd15",
+                        "legal_name": "Nome do CPF 24151507035",
+                        "name": null
+                    },
+                    "balance_after": 279999,
+                    "balance_before": 289999,
+                    "counter_party": {
+                        "account": {
+                            "account_code": "475384",
+                            "branch_code": null,
+                            "institution": "16501555",
+                            "institution_name": "STONE INSTITUIÇÃO DE PAGAMENTO S.A."
+                        },
+                        "entity": {
+                            "name": "Leonardo Pereira"
+                        }
+                    },
+                    "created_at": "2022-09-29T05:12:28Z",
+                    "creation_subject": {
+                        "document": "24151507035",
+                        "id": "user:6324a4c8-6ae6-42f2-abd1-a1ea29b0cd15",
+                        "legal_name": "Nome do CPF 24151507035",
+                        "name": null
+                    },
+                    "description": "",
+                    "fee_amount": 0,
+                    "id": "193cbfb0-b4c8-4629-9431-fa1f34b1d7ef",
+                    "operation": "debit",
+                    "operation_amount": 10000,
+                    "operation_details": null,
+                    "operation_id": "7e0a487e-dd31-4d0b-b5e0-f285d5e106e6",
+                    "scheduled_at": null,
+                    "scheduled_to": null,
+                    "status": "FINISHED",
+                    "subtitle": "Transferência Stone",
+                    "title": "Leonardo Pereira",
+                    "type": "internal"
+                },
+                {
+                    "account_id": "bccd3bf7-3369-4622-b769-71f93d66da87",
+                    "amount":
+                        10000,
+                    "approval_subject": {
+                        "document": "24151507035",
+                        "id": "user:6324a4c8-6ae6-42f2-abd1-a1ea29b0cd15",
+                        "legal_name": "Nome do CPF 24151507035",
+                        "name": null
+                    },
+                    "balance_after": 289999,
+                    "balance_before": 299999,
+                    "counter_party": {
+                        "account": {
+                            "account_code": "475384",
+                            "branch_code": null,
+                            "institution": "16501555",
+                            "institution_name": "STONE INSTITUIÇÃO DE PAGAMENTO S.A."
+                        },
+                        "entity": {
+                            "name": "Leonardo Pereira"
+                        }
+                    },
+                    "created_at": "2022-09-24T01:17:34Z",
+                    "creation_subject": {
+                        "document": "24151507035",
+                        "id": "user:6324a4c8-6ae6-42f2-abd1-a1ea29b0cd15",
+                        "legal_name": "Nome do CPF 24151507035",
+                        "name": null
+                    },
+                    "description": "",
+                    "fee_amount": 0,
+                    "id": "f51b7980-01d8-47db-acd6-384e2e880693",
+                    "operation": "debit",
+                    "operation_amount": 10000,
+                    "operation_details": null,
+                    "operation_id": "5b668617-7bc8-4961-b51d-3e4f0e648081",
+                    "scheduled_at": null,
+                    "scheduled_to": null,
+                    "status": "FINISHED",
+                    "subtitle": "Transferência Stone",
+                    "title": "Leonardo Pereira",
+                    "type": "internal"
+                },
+                {
+                    "account_id": "bccd3bf7-3369-4622-b769-71f93d66da87",
+                    "amount":
+                        1,
+                    "approval_subject": null,
+                    "balance_after": 299999,
+                    "balance_before": 300000,
+                    "counterparty_agent": {
+                        "account": null,
+                        "entity": {
+                            "document": "30378530003",
+                            "document_type": "cpf",
+                            "name": "Bruno De Castro Oliveira"
+                        },
+                        "institution": {
+                            "compe": "197",
+                            "ispb": "16501555",
+                            "name": "STONE INSTITUIÇÃO DE PAGAMENTO S.A."
+                        }
+                    },
+                    "created_at": "2022-05-24T01:57:44Z",
+                    "creation_subject": null,
+                    "fee_amount": 0,
+                    "id": "ef3b4003-3bee-4ef5-ba4d-30012bc2a95c",
+                    "operation": "debit",
+                    "operation_amount": 1,
+                    "operation_details": null,
+                    "operation_id": "202b0125-fb03-459c-82f8-fdf418b8c5d5",
+                    "status": "FINISHED",
+                    "subtitle": "Seguro de Vida",
+                    "title": "Stone Seguros",
+                    "type": "insurance_payment"
+                },
+                {
+                    "account_id": "bccd3bf7-3369-4622-b769-71f93d66da87",
+                    "amount": 300000,
+                    "balance_after": 300000,
+                    "balance_before": 0,
+                    "counter_party": {
+                        "account": {
+                            "account_code": "475384",
+                            "branch_code": "1",
+                            "institution": "16501555",
+                            "institution_name": "STONE INSTITUIÇÃO DE PAGAMENTO S.A."
+                        },
+                        "entity": {
+                            "document": "39166457068",
+                            "document_type": "cpf",
+                            "name": "Leonardo Pereira"
+                        }
+                    },
+                    "created_at": "2021-03-24T13:32:24Z",
+                    "description": "",
+                    "id": "55147fc5-b222-447f-be02-0895cc778dff",
+                    "operation": "credit",
+                    "operation_details": null,
+                    "operation_id": "8b7ba576-7da8-4a04-bb22-83ae02b1c82d",
+                    "status": "FINISHED",
+                    "subtitle": "Transferência Stone",
+                    "title": "Leonardo Pereira",
+                    "type": "internal"
+                }]
+            ]
+        }
+    },
+    "examples": [{
+        "cursor": {
+            "after": null,
+            "before": null,
+            "limit": 25
+        },
+        "data": [{
+            "account_id": "bccd3bf7-3369-4622-b769-71f93d66da87",
+            "amount":
+                279900,
+            "approval_subject": {
+                "document": "24151507035",
+                "id": "user:6324a4c8-6ae6-42f2-abd1-a1ea29b0cd15",
+                "legal_name": "Nome do CPF 24151507035",
+                "name": null
+            },
+            "balance_after": 98,
+            "balance_before": 279998,
+            "counter_party": {
+                "account": {
+                    "account_code": "68888",
+                    "account_type": "CC",
+                    "branch_code": "3141",
+                    "institution": "60746948",
+                    "institution_name": "Banco Bradesco S.A."
+                },
+                "entity": {
+                    "document": "00841116407",
+                    "document_type": "cpf",
+                    "name": "ELLEN CRISTINE SANTOS SIQUEIRA"
+                }
+            },
+            "created_at": "2022-10-07T12:55:12Z",
+            "creation_subject": {
+                "document": "24151507035",
+                "id": "user:6324a4c8-6ae6-42f2-abd1-a1ea29b0cd15",
+                "legal_name": "Nome do CPF 24151507035",
+                "name": null
+            },
+            "delayed_to_next_business_day": false,
+            "fee_amount": 0,
+            "id": "01d09b8f-00af-4063-b22a-d657dbac9512",
+            "operation": "debit",
+            "operation_amount": 279900,
+            "operation_details": null,
+            "operation_id": "cabf62a0-1ef8-4509-b755-b01b4f676583",
+            "refund_reason_code": null,
+            "refund_reason_description": null,
+            "scheduled_at": null,
+            "scheduled_to_effective": null,
+            "scheduled_to_requested": null,
+            "status": "FINISHED",
+            "subtitle": "TED",
+            "title": "ELLEN CRISTINE SANTOS SIQUEIRA",
+            "type": "external"
+        },
+        {
+            "account_id": "bccd3bf7-3369-4622-b769-71f93d66da87",
+            "amount":
+                1,
+            "approval_subject": {
+                "document": "24151507035",
+                "id": "user:6324a4c8-6ae6-42f2-abd1-a1ea29b0cd15",
+                "legal_name": "Nome do CPF 24151507035",
+                "name": null
+            },
+            "balance_after": 279998,
+            "balance_before": 279999,
+            "counter_party": {
+                "account": {
+                    "account_code": "475384",
+                    "branch_code": null,
+                    "institution": "16501555",
+                    "institution_name": "STONE INSTITUIÇÃO DE PAGAMENTO S.A."
+                },
+                "entity": {
+                    "name": "Leonardo Pereira"
+                }
+            },
+            "created_at": "2022-10-07T00:01:25Z",
+            "creation_subject": {
+                "document": "24151507035",
+                "id": "user:6324a4c8-6ae6-42f2-abd1-a1ea29b0cd15",
+                "legal_name": "Nome do CPF 24151507035",
+                "name": null
+            },
+            "description": "",
+            "fee_amount": 0,
+            "id": "fd0d2fe0-e952-4676-8683-5b38efae7db6",
+            "operation": "debit",
+            "operation_amount": 1,
+            "operation_details": null,
+            "operation_id": "2fcb065b-bf16-49db-b366-86ad1a89ca71",
+            "scheduled_at": null,
+            "scheduled_to": null,
+            "status": "FINISHED",
+            "subtitle": "Transferência Stone",
+            "title": "Leonardo Pereira",
+            "type": "internal"
+        },
+        {
+            "account_id": "bccd3bf7-3369-4622-b769-71f93d66da87",
+            "amount":
+                10000,
+            "approval_subject": {
+                "document": "24151507035",
+                "id": "user:6324a4c8-6ae6-42f2-abd1-a1ea29b0cd15",
+                "legal_name": "Nome do CPF 24151507035",
+                "name": null
+            },
+            "balance_after": 279999,
+            "balance_before": 289999,
+            "counter_party": {
+                "account": {
+                    "account_code": "475384",
+                    "branch_code": null,
+                    "institution": "16501555",
+                    "institution_name": "STONE INSTITUIÇÃO DE PAGAMENTO S.A."
+                },
+                "entity": {
+                    "name": "Leonardo Pereira"
+                }
+            },
+            "created_at": "2022-09-29T05:12:28Z",
+            "creation_subject": {
+                "document": "24151507035",
+                "id": "user:6324a4c8-6ae6-42f2-abd1-a1ea29b0cd15",
+                "legal_name": "Nome do CPF 24151507035",
+                "name": null
+            },
+            "description": "",
+            "fee_amount": 0,
+            "id": "193cbfb0-b4c8-4629-9431-fa1f34b1d7ef",
+            "operation": "debit",
+            "operation_amount": 10000,
+            "operation_details": null,
+            "operation_id": "7e0a487e-dd31-4d0b-b5e0-f285d5e106e6",
+            "scheduled_at": null,
+            "scheduled_to": null,
+            "status": "FINISHED",
+            "subtitle": "Transferência Stone",
+            "title": "Leonardo Pereira",
+            "type": "internal"
+        },
+        {
+            "account_id": "bccd3bf7-3369-4622-b769-71f93d66da87",
+            "amount":
+                10000,
+            "approval_subject": {
+                "document": "24151507035",
+                "id": "user:6324a4c8-6ae6-42f2-abd1-a1ea29b0cd15",
+                "legal_name": "Nome do CPF 24151507035",
+                "name": null
+            },
+            "balance_after": 289999,
+            "balance_before": 299999,
+            "counter_party": {
+                "account": {
+                    "account_code": "475384",
+                    "branch_code": null,
+                    "institution": "16501555",
+                    "institution_name": "STONE INSTITUIÇÃO DE PAGAMENTO S.A."
+                },
+                "entity": {
+                    "name": "Leonardo Pereira"
+                }
+            },
+            "created_at": "2022-09-24T01:17:34Z",
+            "creation_subject": {
+                "document": "24151507035",
+                "id": "user:6324a4c8-6ae6-42f2-abd1-a1ea29b0cd15",
+                "legal_name": "Nome do CPF 24151507035",
+                "name": null
+            },
+            "description": "",
+            "fee_amount": 0,
+            "id": "f51b7980-01d8-47db-acd6-384e2e880693",
+            "operation": "debit",
+            "operation_amount": 10000,
+            "operation_details": null,
+            "operation_id": "5b668617-7bc8-4961-b51d-3e4f0e648081",
+            "scheduled_at": null,
+            "scheduled_to": null,
+            "status": "FINISHED",
+            "subtitle": "Transferência Stone",
+            "title": "Leonardo Pereira",
+            "type": "internal"
+        },
+        {
+            "account_id": "bccd3bf7-3369-4622-b769-71f93d66da87",
+            "amount":
+                1,
+            "approval_subject": null,
+            "balance_after": 299999,
+            "balance_before": 300000,
+            "counterparty_agent": {
+                "account": null,
+                "entity": {
+                    "document": "30378530003",
+                    "document_type": "cpf",
+                    "name": "Bruno De Castro Oliveira"
+                },
+                "institution": {
+                    "compe": "197",
+                    "ispb": "16501555",
+                    "name": "STONE INSTITUIÇÃO DE PAGAMENTO S.A."
+                }
+            },
+            "created_at": "2022-05-24T01:57:44Z",
+            "creation_subject": null,
+            "fee_amount": 0,
+            "id": "ef3b4003-3bee-4ef5-ba4d-30012bc2a95c",
+            "operation": "debit",
+            "operation_amount": 1,
+            "operation_details": null,
+            "operation_id": "202b0125-fb03-459c-82f8-fdf418b8c5d5",
+            "status": "FINISHED",
+            "subtitle": "Seguro de Vida",
+            "title": "Stone Seguros",
+            "type": "insurance_payment"
+        },
+        {
+            "account_id": "bccd3bf7-3369-4622-b769-71f93d66da87",
+            "amount": 300000,
+            "balance_after": 300000,
+            "balance_before": 0,
+            "counter_party": {
+                "account": {
+                    "account_code": "475384",
+                    "branch_code": "1",
+                    "institution": "16501555",
+                    "institution_name": "STONE INSTITUIÇÃO DE PAGAMENTO S.A."
+                },
+                "entity": {
+                    "document": "39166457068",
+                    "document_type": "cpf",
+                    "name": "Leonardo Pereira"
+                }
+            },
+            "created_at": "2021-03-24T13:32:24Z",
+            "description": "",
+            "id": "55147fc5-b222-447f-be02-0895cc778dff",
+            "operation": "credit",
+            "operation_details": null,
+            "operation_id": "8b7ba576-7da8-4a04-bb22-83ae02b1c82d",
+            "status": "FINISHED",
+            "subtitle": "Transferência Stone",
+            "title": "Leonardo Pereira",
+            "type": "internal"
+        }]
+    }]
+}
