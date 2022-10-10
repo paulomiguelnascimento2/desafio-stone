@@ -27,6 +27,7 @@ O projeto foi estruturado conforme descrito abaixo seguindo a ordem das pastas
     - Execução do requirements: pip install -r requirements.txt
 
     - Execução do Projeto: robot -d ./logs  .\desafio-stone\DesafioStone-Mobile\br.com.mobile.stone\Tests\
+    **Obs:**  - AppiumServer deve estar Estartado e Emualador em Execução
 
 # Tecnologias Utilizadas 
 
