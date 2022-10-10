@@ -39,16 +39,16 @@ O projeto foi estruturado conforme descrito abaixo seguindo a ordem das pastas
 
     - Foi verificado na documentação da API que na API de extrato a mesma possui alguns query params porém foi notado que o GET utilizando esses filtros não funcionam corretamente os erros de cada um são melhores descritos abaixo:
 
-        - Filtro Limit - Ao utilizar esse parametro a API exibe o response sem está de Acordo com o que foi filtrado
-        - Filtro before -  Ao utilizar esse parametro a API exibe o response sem está de Acordo com o que foi filtrado
-        - Filtro after -  Ao utilizar esse parametro a API exibe o response sem está de Acordo com o que foi filtrado
-        - Filtro start_datetime - Ao utilizar esse parametro a API exibe o response sem está de Acordo com o que foi filtrado, e também não efetua validação caso seja         informada datas com valores incorretos
-        - Filtro end_datetime  - Ao utilizar esse parametro a API exibe o response sem está de Acordo com o que foi filtrado, e também não efetua validação caso seja           informada datas com valores incorretos
+        - Filtro Limit - Ao utilizar esse parametro a API exibe o response sem está de Acordo com o que foi filtrado.
+        - Filtro before -  Ao utilizar esse parametro a API exibe o response sem está de Acordo com o que foi filtrado.
+        - Filtro after -  Ao utilizar esse parametro a API exibe o response sem está de Acordo com o que foi filtrado.
+        - Filtro start_datetime - Ao utilizar esse parametro a API exibe o response sem está de Acordo com o que foi filtrado, e também não efetua validação caso seja informada datas com valores incorretos.
+        - Filtro end_datetime  - Ao utilizar esse parametro a API exibe o response sem está de Acordo com o que foi filtrado, e também não efetua validação caso seja  informada datas com valores incorretos.
         - Filtro type - Ao utilizar esse parametro a API exibe o response sem está de Acordo com o que foi filtrado podem ser pesquisados pelos filtros "internal",    "external", "external_refund, payment", "payment_refund", "balance_block", "card_payment", "salary_portability", "salary_portability_refund",                  "salary_portability_employer_refund" e "instant_payment" onde deveriam filtrar e exibir no response de acordo com o Filtro Exemplo caso passasse "internal" API         deveria retornar somente os internal porém não é o que está ocorrendo. Foram Criados testes para as situações para uma maior cobertura porém se faz necessário o ajuste.
 
     - Na API de Transferencia ao enviar a request e em seguida enviar novamente API apresenta erro 401 porém o token ainda não está expirado dessa forma esse erro não deveria ocorrer.
 
-    - Na API de Transferencia ao informar algum valor inválido ou não informar API apresenta validação em alguns campos mais ao tentar executar novamente o mesmo   apresenta erro 401
+    - Na API de Transferencia ao informar algum valor inválido ou não informar API apresenta validação em alguns campos mais ao tentar executar novamente o mesmo   apresenta erro 401.
 
     - Na API de transferencia não possui todas as validações necessárias de todos os campos, sendo necessário revisar o desenvolvimento de algumas validações bem como a criação dos testes.
 
