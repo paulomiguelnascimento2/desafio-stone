@@ -4,8 +4,8 @@ Esse é um repositório que contém o desafio proposto pela Stone referente a au
 
 # Estrutura
 
-- DesafioStone-API -    Este diretório contém todos os arquivos e instruções de execução do projeto de automação backend.
-- DesafioStone-Mobile - Este diretório contém todos os arquivos e instruções de execução do projeto de automação frontend.
-- Planejamento_Casos_de_Testes.pdf - Este arquivo contém o planejamento dos testes propostos na primeira parte do desafio.
+- **DesafioStone-API** -    Este diretório contém todos os arquivos e instruções de execução do projeto de automação backend.
+- **DesafioStone-Mobile** - Este diretório contém todos os arquivos e instruções de execução do projeto de automação frontend.
+- **Planejamento_Casos_de_Testes.pdf** - Este arquivo contém o planejamento dos testes propostos na primeira parte do desafio.
 
 
