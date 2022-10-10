@@ -166,12 +166,12 @@ valido o status code de sucesso de Extrato
 
 
 
-verifico o Contrato da API de Extrato e o Status Code
+verifico o Contrato da API de Extrato e o Status Code 
 
      
       ${status_code}=     convert to string       ${response.status_code}
       should be equal     ${status_code}          200
-      Validate Jsonschema From File     ${response.json()}     br.com.api.stone/Json/ContratoExtrato.json
+      Validate Jsonschema From File     ${response.json()}     desafio-stone/DesafioStone-API/br.com.api.stone/Json/ContratoExtrato.json
 valido o status code de não autorizada do Extrato
 
     

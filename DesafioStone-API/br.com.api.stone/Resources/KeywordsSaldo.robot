@@ -41,7 +41,7 @@ verifico o Contrato da API de Saldo e o Status Code
      
       ${status_code}=     convert to string       ${response.status_code}
       should be equal     ${status_code}          200
-      Validate Jsonschema From File     ${response.json()}     br.com.api.stone/Json/ContratoSaldo.json
+      Validate Jsonschema From File     ${response.json()}     desafio-stone/DesafioStone-API/br.com.api.stone/Json/ContratoSaldo.json
 
 valido o status code de não autorizada
 

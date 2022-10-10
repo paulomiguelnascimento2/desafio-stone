@@ -205,7 +205,7 @@ verifico o Contrato da API de Transferencia e o Status Code
 
       ${status_code}=     convert to string       ${response.status_code}
       should be equal     ${status_code}          201
-      Validate Jsonschema From File     ${response.json()}     br.com.api.stone/Json/ContratoTransferencia.json
+      Validate Jsonschema From File     ${response.json()}       desafio-stone/DesafioStone-API/br.com.api.stone/Json/ContratoTransferencia.json
 
 
 
