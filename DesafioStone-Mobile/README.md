@@ -6,11 +6,11 @@ Esse é um repositório que contém os testes de Frontend do aplicativo sunflowe
 
 O projeto foi estruturado conforme descrito abaixo seguindo a ordem das pastas
 
-- **Pasta app* - Contém o arquivo .apk que foi aferido a qualidade.
+- **Pasta app** - Contém o arquivo .apk que foi aferido a qualidade.
 
-- **PageObjects* - Esta pasta contém o arquivo "sunflower_pages_objects.py" arquivo esse que contém os elementos utilizados na relização do testes, a criação desse arquivo facilita na manutenção dos testes, visto que caso ocorra alteração de algum elemento se faz necessário o ajuste somente nesse arquivo.
+- **PageObjects** - Esta pasta contém o arquivo "sunflower_pages_objects.py" arquivo esse que contém os elementos utilizados na relização do testes, a criação desse arquivo facilita na manutenção dos testes, visto que caso ocorra alteração de algum elemento se faz necessário o ajuste somente nesse arquivo.
 
-- **Resources* - Esta pasta contém os arquivos "BaseURL.robot", "BDD.robot", "KeywordsAuth.robot", "KeywordsExtrato.robot", "KeywordSaldo.robot", "KeywordsTransferencia.robot" 
+- **Resources** - Esta pasta contém os arquivos "Base.robot", "BDD.robot", "KeywordsSunflower.robot" 
 
     - Base.robot - Contém os scripts necessários que serão comumente usandos no projeto
     - BDD.robot - Contém a descrição para a utilização do BDD no projeto
